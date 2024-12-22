@@ -1,0 +1,29 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    // Moreover, this file is based on this video:
+    // https://www.youtube.com/watch?v=sFt-U3F-H1c
+    // Even though this will make it work for your IDE, I'm currently using `Manim Sideview` VSCode extension;
+    // https://www.youtube.com/watch?v=sFpFlMEu7OY
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Render Scene",
+            "type": "shell",
+            "command": "manim -ql ${file} ${input:Scene}",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "Scene",
+            "description": "Enter the scene you want to render",
+            "default": "",
+            "type": "promptString"
+        }
+    ]
+}

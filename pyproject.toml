@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "manim-odyash-playground"
+version = "0.1.0"
+description = "A Manim playground which hopefully makes its viewer more acquainted with the tool :]."
+authors = [
+    { name = "OdyAsh", email = "ashicsresources@gmail.com" }
+]
+requires-python = ">=3.11" # This is what's been tested, so it *could* work on older versions.
+
+[project.urls]
+Homepage = "https://github.com/odyash/manim-odyash-playground"
+Documentation = "https://github.com/odyash/manim-odyash-playground"
+Source = "https://github.com/odyash/manim-odyash-playground"
+Tracker = "https://github.com/odyash/manim-odyash-playground/issues"
+
+[tool.ruff]
+line-length = 127
+indent-width = 4
+target-version = "py311"
+lint.select = ["E", "F"]
+lint.fixable = ["ALL"]
+lint.ignore = [
+    "D100",   # ignore missing docs
+    "E402",   # false positives for local imports
+    "TRY003", # external messages in exceptions are too verbose
+]
+lint.mccabe.max-complexity = 10
+
+[tool.ruff.format]    
+# Like Black, use double quotes for strings.
+quote-style = "double"
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+    

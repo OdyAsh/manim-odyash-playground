@@ -1,0 +1,30 @@
+{
+    // On linux use "terminal.integrated.env.linux": {
+    "terminal.integrated.env.windows": {
+    "PYTHONPATH": "${workspaceFolder}/src"
+    },
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+    "notebook.source.fixAll": "explicit",
+    "notebook.source.organizeImports": "explicit"
+    },
+    "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "files.exclude": {
+        "**/.git": false,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/.conda": true,
+        "**/.venv": true
+    },
+    "explorerExclude.backup": {}
+}
